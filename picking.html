@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <h2>Random Picker</h2>
+            <div class="close-min-button">
+                <button class="topButtons" onclick="minWindow()">
+                    <img src="assets/minimize.png" alt="Minimize">
+                </button>
+                <button class="topButtons" onclick="closeWindow()">
+                    <img src="assets/close.png" alt="Close">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="contents">
+            <div class="images">
+            </div>
+            <div id="output">Picking...</div>
+            <button class = "pixel-button" id = "backButton">Okay!</button>
+            <button class = "pixel-button" id = "respinButton">Roll Again!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

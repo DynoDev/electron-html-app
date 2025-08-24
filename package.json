@@ -1,0 +1,29 @@
+{
+  "name": "s1mply-html",
+  "version": "1.0.0",
+  "description": "first html application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "asar": true,
+    "productName": "s1mply-html",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "assets/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^34.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "author": "Najwan",
+  "license": "ISC"
+}
