@@ -1,7 +1,7 @@
 const { ipcRenderer } = require("electron");
 
-require('dotenv').config();
-const discordAPI = process.env.DISCORD;
+// require('dotenv').config();
+const discordAPI = process.env.DISCORD || null;
 
 function closeWindow() {
     ipcRenderer.send("close-window");
@@ -152,6 +152,12 @@ function sendIdea() {
 
     if (ideaText === "") {
         openPrompt("Please enter something so I can send it!");
+        modalImage.src = "assets/redCross.png";
+        return;
+    }
+
+    if(!discordAPI) {
+        openPrompt("Discord API URL is not set!");
         modalImage.src = "assets/redCross.png";
         return;
     }
